@@ -23,10 +23,10 @@ function App() {
     <div className="App">
       <TopNavigation />
 
-      <Container>
-        <Row>
-          <Col xs={12}>
-            th
+      <Container fluid>
+        <Row className="m-0 p-0">
+          <Col xs={12} lg={10}>
+            
           </Col>
         </Row>
         <Row>
@@ -41,14 +41,15 @@ function App() {
             </Switch>
           </Col>
         </Row>
-        <Row>
-          <Col sm>sm=true</Col>
-          <Col sm>sm=true</Col>
-          <Col sm>sm=true</Col>
+        <Row className="m-0">
+          <Col xs={12} lg={10}>
+            
+          </Col>
         </Row>
       </Container>
       
       <Footer />
+      
     </div>
   );
 }
