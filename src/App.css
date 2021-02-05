@@ -1,33 +1,71 @@
+body {
+  background-color: #343a40;
+  overscroll-behavior: none;
+}
+
 .container {
   max-width: 100vh;
 }
 
+.colorGradient {
+  position: relative;
+  top: 85px;
+  min-height: auto;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(30, 180, 143),
+    rgb(8, 84, 94)
+  );
+} 
+
+.dotOverlay {
+  min-height: 100vh;
+  background-size: 3px 3px;
+  background-image: radial-gradient(
+    circle,
+    #3a3a3a 0.2px,
+    rgba(173, 25, 25, 0) 1px
+  );
+}
+
+
 .spinnerContainer {
-  margin: 10px;
+  margin-bottom: -60px;
+  margin-right: 10px;
 }
 
 .logoNegative {
-  position: absolute;
-  top: 50px;
-  margin: 10px;
-  width: 300px;
+  position: relative;
+  top: -60px;
+  width: 60px;
   border-radius: 10px;
   z-index: 10;
 }
 
 .logoRotatingColorGradient {
-  position: absolute;
-  top: 50px;
-  margin: 10px;
+  position: relative;
+  top: 0px;
   border-radius: 50%;
-  min-height: 300px;
-  width: 300px;
+  min-height: 60px;
+  width: 60px;
   z-index: 9;
   background-image: linear-gradient(to right, rgb(43, 175, 147) , rgb(124, 101, 211));
-  animation: spin 8s linear infinite;
+  animation: spin 10s linear infinite;
 }
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.dark-jumbotron {
+  background-color: #343a40;
+  width: 100%;
+  height: 100%;
+  
+}
+
+Jumbotron {
+  overflow: hidden;
+  background-color: #343a40;
 }

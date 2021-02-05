@@ -6,8 +6,9 @@ import logoNegative from '../images/own-logo/RH-Logo-05_negative.png'
 
 const Home = () => {
     return (
-        <Jumbotron>
-            <h1>Hello, world!</h1>
+        <Jumbotron className="mt-2">
+            <div className="dark-jumbotron">
+                <h1>Hello, world!</h1>
             <p>
                 This is a simple hero unit, a simple jumbotron-style component for calling
                 extra attention to featured content or information.
@@ -22,6 +23,8 @@ const Home = () => {
             <p>
                 <Button variant="primary">Learn more</Button>
             </p>
+            </div>
+            
         </Jumbotron>
     )
 }
