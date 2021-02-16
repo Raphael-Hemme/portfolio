@@ -11,7 +11,7 @@ import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = () => {
     return (
-        <Navbar bg="dark" variant="dark" className="justify-content-center" fixed="bottom">
+        <Navbar bg="light" variant="light" className="justify-content-center" fixed="bottom">
             <Nav className="justify-content-center">
                 <Nav.Link href="/projects"><FontAwesomeIcon icon={faGithubSquare} size="2x"/></Nav.Link>
                 <Nav.Link href="/about"><FontAwesomeIcon icon={faLinkedin} size="2x"/></Nav.Link>

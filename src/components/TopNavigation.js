@@ -3,11 +3,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 import logo from '../images/own-logo/RH-logo.png';
-import logoNegative from '../images/own-logo/RH-Logo-05_negative.png'
+import logoNegativeNight from '../images/own-logo/RH-Logo-05-negative-small-night.png';
+import logoNegativeDay from '../images/own-logo/RH-Logo-05-negative-small-day.png'
 
 const TopNavigation = () => {
     return (
-        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" fixed="top">
+        <Navbar collapseOnSelect expand="md" bg="light" variant="light" fixed="top">
             <Navbar.Brand href="/" className="component-navbar-brand align-middle">
 {/*                 <img
                     alt=""
@@ -17,7 +18,7 @@ const TopNavigation = () => {
                 /> */}
                 <span className="spinnerContainer d-inline-block align-middle">
                     <div className="logoRotatingColorGradient"> </div>
-                    <img src={logoNegative} alt="" className="logoNegative"/>
+                    <img src={logoNegativeDay} alt="" className="logoNegative"/>
                 </span> {' '}
                 <h1 className="d-inline-block align-middle text-secondary">Raphael Hemme</h1>
             </Navbar.Brand>
