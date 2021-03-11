@@ -7,16 +7,18 @@ body {
   max-width: 100vh;
 }
 
+/* ----- Background gradient and dot-overlay ----- */
+
 .colorGradient {
   position: relative;
-  top: 85px;
+  top: 0px;
   min-height: auto;
   background-image: linear-gradient(
     to bottom,
     rgb(30, 180, 143),
     rgb(8, 84, 94)
   );
-} 
+}
 
 .dotOverlay {
   min-height: 100vh;
@@ -28,8 +30,13 @@ body {
   );
 }
 
+/* ----- Logo classes ----- */
+.logo-container-small-nav {
+  margin-bottom: -60px;
+  margin-right: 10px;
+}
 
-.spinnerContainer {
+.logo-container-big-main {
   margin-bottom: -60px;
   margin-right: 10px;
 }
@@ -42,30 +49,47 @@ body {
   z-index: 10;
 }
 
-.logoRotatingColorGradient {
+.logo-bg-rotating-gradient {
   position: relative;
   top: 0px;
   border-radius: 50%;
   min-height: 60px;
   width: 60px;
   z-index: 9;
-  background-image: linear-gradient(to right, rgb(43, 175, 147) , rgb(124, 101, 211));
+  background-image: linear-gradient(
+    to right,
+    rgb(43, 175, 147),
+    rgb(124, 101, 211)
+  );
   animation: spin 10s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.dark-jumbotron {
+/* ----- Jumbotron ----- */
+
+/* .dark-jumbotron {
   background-color: #343a40;
   width: 100%;
   height: 100%;
-  
-}
+} */
 
 Jumbotron {
   overflow: hidden;
   background-color: #343a40;
+}
+
+/* ----- Splash screen ----- */
+
+.splash-screen {
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
 }

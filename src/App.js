@@ -1,60 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useState, useRef, useEffect } from "react";
+import { Switch, Route } from "react-router-dom";
 
 // React-Bootstrap imports:
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 // Import of bootstrap stylesheet
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Import own components
-import TopNavigation from './components/TopNavigation';
-import Home from './components/Home';
-import Projects from './components/Projects';
-import Footer from './components/Footer';
-
+import SplashScreen from "./components/SplashScreen";
+import TopNavigation from "./components/TopNavigation";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
+  let [displaySplashScreen, setDisplaySplashScreen] = useState(true);
+  let [isScrolled, setIsScrolled] = useState(0);
+
+  useEffect(() => {
+    window.onscroll = () => {
+      setIsScrolled(window.pageYOffset);
+      isScrolled >= 50
+        ? setDisplaySplashScreen(false)
+        : setDisplaySplashScreen(true);
+    };
+  }, [isScrolled, displaySplashScreen]);
+
   return (
     <div className="App">
+      {/* The following two divs are just for the background image */}
+      <div className="colorGradient">
+        <div className="dotOverlay">
+          {displaySplashScreen ? (
+            <SplashScreen />
+          ) : (
+            <Container>
+              <TopNavigation />
+              <Row className="m-0 p-0">
+                <Col xs={12} lg={10}></Col>
+              </Row>
 
+              <Row>
+                <Col sm>
+                  <Switch>
+                    <Route path="/projects">
+                      <Projects />
+                    </Route>
+                    <Route path="/">
+                      <Home />
+                    </Route>
+                  </Switch>
+                </Col>
+              </Row>
 
+              <Row className="m-0">
+                <Col xs={12} lg={10}></Col>
+              </Row>
 
-      <TopNavigation />
-
-      <Container fluid className="colorGradient">
-
-          <Row className="m-0 p-0">
-            <Col xs={12} lg={10}>
-
-            </Col>
-          </Row>
-          <Row className="dotOverlay">
-            <Col sm>
-              <Switch>
-                <Route path='/projects'>
-                  <Projects />
-                </Route>
-                <Route path='/'>
-                  <Home />
-                </Route>
-              </Switch>
-            </Col>
-          </Row>
-          <Row className="m-0">
-            <Col xs={12} lg={10}>
-
-            </Col>
-          </Row>
-
-      </Container>
-
-      <Footer />
-
+              <Footer />
+            </Container>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
