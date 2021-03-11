@@ -6,9 +6,9 @@ import logoNegativeDay from "../images/own-logo/RH-Logo-05-negative-small-day.pn
 
 const Logo = ({ size }) => {
   return (
-    <span className={`${size}`}>
-      <div className={`logo-bg-rotating-gradient`}> </div>
-      <img src={logoNegativeDay} alt="" className="logoNegative" />
+    <span className={`d-inline-block align-middle logo-container-${size}`}>
+      <div className={`logo-bg-rotating-gradient-${size}`}> </div>
+      <img src={logoNegativeDay} alt="" className={`logoNegative-${size}`} />
     </span>
   );
 };

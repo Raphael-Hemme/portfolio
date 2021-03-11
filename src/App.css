@@ -31,7 +31,7 @@ body {
 }
 
 /* ----- Logo classes ----- */
-.logo-container-small-nav {
+.logo-container-small {
   margin-bottom: -60px;
   margin-right: 10px;
 }
@@ -41,7 +41,7 @@ body {
   margin-right: 10px;
 }
 
-.logoNegative {
+.logoNegative-small {
   position: relative;
   top: -60px;
   width: 60px;
@@ -49,7 +49,7 @@ body {
   z-index: 10;
 }
 
-.logo-bg-rotating-gradient {
+.logo-bg-rotating-gradient-small {
   position: relative;
   top: 0px;
   border-radius: 50%;
@@ -71,19 +71,6 @@ body {
   100% {
     transform: rotate(360deg);
   }
-}
-
-/* ----- Jumbotron ----- */
-
-/* .dark-jumbotron {
-  background-color: #343a40;
-  width: 100%;
-  height: 100%;
-} */
-
-Jumbotron {
-  overflow: hidden;
-  background-color: #343a40;
 }
 
 /* ----- Splash screen ----- */

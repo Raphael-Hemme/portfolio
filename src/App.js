@@ -39,31 +39,26 @@ function App() {
           {displaySplashScreen ? (
             <SplashScreen />
           ) : (
-            <Container>
+            <>
               <TopNavigation />
-              <Row className="m-0 p-0">
-                <Col xs={12} lg={10}></Col>
-              </Row>
 
-              <Row>
-                <Col sm>
-                  <Switch>
-                    <Route path="/projects">
-                      <Projects />
-                    </Route>
-                    <Route path="/">
-                      <Home />
-                    </Route>
-                  </Switch>
-                </Col>
-              </Row>
-
-              <Row className="m-0">
-                <Col xs={12} lg={10}></Col>
-              </Row>
+              <Container fluid="true" className="m-0 p-5">
+                <Row className="m-0 p-0 justify-content-center">
+                  <Col xs={12} lg={10} className="justify-content-center">
+                    <Switch>
+                      <Route path="/projects">
+                        <Projects />
+                      </Route>
+                      <Route path="/">
+                        <Home />
+                      </Route>
+                    </Switch>
+                  </Col>
+                </Row>
+              </Container>
 
               <Footer />
-            </Container>
+            </>
           )}
         </div>
       </div>
