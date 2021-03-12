@@ -12,11 +12,11 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Import own components
-import SplashScreen from "./components/SplashScreen";
-import TopNavigation from "./components/TopNavigation";
-import Home from "./components/Home";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import SplashScreen from "./components/SplashScreen.jsx";
+import TopNavigation from "./components/TopNavigation.jsx";
+import Home from "./components/Home.jsx";
+import Projects from "./components/Projects.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   let [displaySplashScreen, setDisplaySplashScreen] = useState(true);
@@ -42,7 +42,7 @@ function App() {
             <>
               <TopNavigation />
 
-              <Container fluid="true" className="m-0 p-5">
+              <Container fluid="true" className="m-0">
                 <Row className="m-0 p-0 justify-content-center">
                   <Col xs={12} lg={10} className="justify-content-center">
                     <Switch>

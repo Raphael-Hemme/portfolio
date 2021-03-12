@@ -80,3 +80,34 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* ----- SplashScreen ----- */
+
+.splash-screen {
+  width: 100%;
+  max-width: 100%;
+}
+
+.splash-screen > img {
+  max-width: 100%;
+}
+
+/* ----- Home ----- */
+
+.home-component {
+  color: #ffffff;
+}
+
+.home-component > h2 {
+  font-size: 7rem;
+  margin-bottom: 3rem;
+}
+
+.home-component > h3 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.home-component > h4 {
+  font-size: 1.5rem;
+}
