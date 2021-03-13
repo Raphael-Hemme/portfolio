@@ -13,7 +13,6 @@ const Navigation = () => {
       bg="light"
       variant="light"
       fluid="true"
-      fixed="bottom"
       className="justify-content-center"
     >
       <Nav className="justify-content-center">

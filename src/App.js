@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 
 // React-Bootstrap imports:
@@ -12,7 +11,6 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Import own components
-import SplashScreen from "./components/SplashScreen.jsx";
 import TopNavigation from "./components/TopNavigation.jsx";
 import Home from "./components/Home.jsx";
 import Projects from "./components/Projects.jsx";
@@ -36,30 +34,25 @@ function App() {
       {/* The following two divs are just for the background image */}
       <div className="colorGradient">
         <div className="dotOverlay">
-          {displaySplashScreen ? (
-            <SplashScreen />
-          ) : (
-            <>
-              <TopNavigation />
+          <TopNavigation
+            topNavHeight={displaySplashScreen ? "top-nav-big" : "top-nav-small"}
+          />
 
-              <Container fluid="true" className="m-0">
-                <Row className="m-0 p-0 justify-content-center">
-                  <Col xs={12} lg={10} className="justify-content-center">
-                    <Switch>
-                      <Route path="/projects">
-                        <Projects />
-                      </Route>
-                      <Route path="/">
-                        <Home />
-                      </Route>
-                    </Switch>
-                  </Col>
-                </Row>
-              </Container>
-
-              <Footer />
-            </>
-          )}
+          <Container fluid="true" className="m-0 pt-5">
+            <Row className="m-0 p-0 justify-content-center">
+              <Col xs={12} lg={10} className="justify-content-center pt-5">
+                <Switch>
+                  <Route path="/projects">
+                    <Projects />
+                  </Route>
+                  <Route path="/">
+                    <Home />
+                  </Route>
+                </Switch>
+              </Col>
+            </Row>
+            <Footer />
+          </Container>
         </div>
       </div>
     </div>

@@ -1,6 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #343a40;
   overscroll-behavior: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -30,7 +39,17 @@ body {
   );
 }
 
-/* ----- Logo classes ----- */
+/* ----- Top Navigation ----- */
+
+.top-nav-big {
+  height: 15vh;
+}
+
+.top-nav-small {
+  height: 10vh;
+}
+
+/* ----- Logo ----- */
 .logo-container-small {
   margin-bottom: -60px;
   margin-right: 10px;
@@ -73,41 +92,75 @@ body {
   }
 }
 
-/* ----- Splash screen ----- */
-
-.splash-screen {
-  min-height: 150vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ----- SplashScreen ----- */
-
-.splash-screen {
-  width: 100%;
-  max-width: 100%;
-}
-
-.splash-screen > img {
-  max-width: 100%;
-}
-
 /* ----- Home ----- */
 
 .home-component {
   color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .home-component > h2 {
-  font-size: 7rem;
-  margin-bottom: 3rem;
+  font-size: 3rem;
+  margin: 5% 0 5% 0;
 }
 
 .home-component > h3 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .home-component > h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-component > img {
+  width: 70%;
+  margin: 5% 0 20% 0;
+}
+
+/* ----- Footer ----- */
+
+/* .footer-position {
+  height: 60px;
+} */
+
+/* ##### Tablet and Desktop ##### */
+
+@media only screen and (min-width: 768px) {
+  /* ----- home component ----- */
+
+  .home-component > img {
+    width: 40%;
+    margin: 3% 0 3% 0;
+  }
+
+  .home-component > h2 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .home-component > h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-component > h4 {
+    font-size: 1.5rem;
+  }
+
+  /* ----- Top Navigation ----- */
+
+  .top-nav-big {
+    height: 10vh;
+  }
+
+  .top-nav-small {
+    height: 7vh;
+  }
 }

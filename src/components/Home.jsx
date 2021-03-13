@@ -1,12 +1,15 @@
 import React from "react";
 
+import bigLogo from "../images/own-logo/RH-Logo-05.png";
+
 const Home = () => {
   return (
-    <section className="mt-5 home-component">
+    <section className="home-component">
       <h2 className="greeting">Hey, I'm Raphael.</h2>
       <h3 className="profession">
         Web Developer & Anthropologist of Technology
       </h3>
+      <img src={bigLogo} alt="" />
       <h4 className="tagline">
         My mind constantly generates out of the box ideas and modern web
         technologies help me build them.
