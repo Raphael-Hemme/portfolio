@@ -16,6 +16,8 @@ import Home from "./components/Home.jsx";
 import Projects from "./components/Projects.jsx";
 import Footer from "./components/Footer.jsx";
 
+import BlogPost from "./components/BlogPost";
+
 function App() {
   let [displaySplashScreen, setDisplaySplashScreen] = useState(true);
   let [isScrolled, setIsScrolled] = useState(0);
@@ -35,15 +37,15 @@ function App() {
       <div className="colorGradient">
         <div className="dotOverlay">
           <TopNavigation
-            topNavHeight={displaySplashScreen ? "top-nav-big" : "top-nav-small"}
+            // topNavHeight={displaySplashScreen ? "top-nav-big" : "top-nav-small"}
           />
 
           <Container fluid="true" className="m-0 pt-5">
-            <Row className="m-0 p-0 justify-content-center">
-              <Col xs={12} lg={10} className="justify-content-center pt-5">
+            <Row fluid="true" className="m-0 mt-4 p-0 justify-content-center">
+              <Col xs={12} className="justify-content-center p-0 pt-4 m-0 mt-5">
                 <Switch>
-                  <Route path="/projects">
-                    <Projects />
+                  <Route path="/blogpost">
+                    <BlogPost />
                   </Route>
                   <Route path="/">
                     <Home />

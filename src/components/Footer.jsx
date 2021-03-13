@@ -16,10 +16,10 @@ const Navigation = () => {
       className="justify-content-center"
     >
       <Nav className="justify-content-center">
-        <Nav.Link href="/projects">
+        <Nav.Link href="https://github.com/Raphael-Hemme">
           <FontAwesomeIcon icon={faGithubSquare} size="2x" />
         </Nav.Link>
-        <Nav.Link href="/about">
+        <Nav.Link href="https://linkedin.com/in/raphael-hemme/">
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </Nav.Link>
         <Nav.Link href="#deets">
